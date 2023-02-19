@@ -10384,7 +10384,7 @@ characters = [
 ]
 
 
-# Challenge #1 
+# Challenge #1 COMPLETE
 
 # Get a unique list of the types of wood used for wands
 
@@ -10397,19 +10397,19 @@ characters = [
 # p uniq_wood
 
 
-# Challenge #2
+# Challenge #2 COMPLETE
 
 # Get a list of the characters who have alternative names
 
 # ["Ron Weasley", "Severus Snape", ... ]
 
-alt_names = []
+# alt_names = []
 
-characters.each do |char|
-    alt_names << char[:name] if !char[:alternate_names].empty?
-end
+# characters.each do |char|
+#     alt_names << char[:name] if !char[:alternate_names].empty?
+# end
 
-p alt_names
+# p alt_names
 
 # CHALLENGE #3
 
