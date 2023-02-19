@@ -1,3 +1,4 @@
+require 'pry'
 characters = [
     {
         "name": "Harry Potter",
@@ -10389,6 +10390,12 @@ characters = [
 
 # ["holly", "vine", "willow" ... ]
 
+# uniq_wood = []
+#     characters.each do |char|
+#         uniq_wood << char[:wand][:wood] if !uniq_wood.include?(char[:wand][:wood]) && !char[:wand][:wood].empty?
+#     end
+# p uniq_wood
+
 
 # Challenge #2
 
@@ -10396,7 +10403,13 @@ characters = [
 
 # ["Ron Weasley", "Severus Snape", ... ]
 
+alt_names = []
 
+characters.each do |char|
+    alt_names << char[:name] if !char[:alternate_names].empty?
+end
+
+p alt_names
 
 # CHALLENGE #3
 
