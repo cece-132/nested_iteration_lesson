@@ -1,3 +1,4 @@
+require 'pry'
 cities_lived_in = {
     michaela: ["Philadelphia", "Fort Collins", "Seattle"],
     mike: ["Denver", "Santa Fe", "Philadelphia", "Portland"],
@@ -10,7 +11,11 @@ cities_lived_in = {
 # Get a unique list of all of the cities that these humans have lived in  
 # ["Philadelphia", "Fort Collins", "Seattle", "Denver", "Santa Fe", "Portland", "Lansing", "Columbus", "Austin"]
 
-
+x = cities_lived_in.map do |name, cities|
+    cities.each do |city|
+        city
+    end
+end.flatten.uniq
 
 
 # Problem #2: 
@@ -21,8 +26,11 @@ cities_lived_in = {
 # or
 # ["Michaela", "Mike", "Salvador"]
 
+x = cities_lived_in.map do |name, cities|
+    name if cities.include?("Philadelphia")
+end.compact
 
-
+pp x
 
 # Problem #3: 
 # Create a hash that has the city as a key, and the number of people that live in it as it's value: 
@@ -38,3 +46,17 @@ cities_lived_in = {
 #     "Columbus => 1,
 #     "Austin" => 1
 # }
+
+hash = {}
+
+cities_lived_in.each do |name, cities|
+    cities.each do |city|
+        if hash[:"#{city}"].nil?
+            hash[:"#{city}"] = 1
+        else
+            hash[:"#{city}"] += 1
+        end
+    end
+end
+
+pp hash
