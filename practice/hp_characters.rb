@@ -10424,6 +10424,16 @@ characters = [
 #     ...
 # }
 
+# alt_names = {}
+
+# characters.each do |char|
+#   if !char[:alternate_names].empty?
+#     alt_names[:"#{char[:name]}"] = char[:alternate_names]
+#   end
+# end
+
+# p alt_names
+
 
 # Challenge #4 
 
@@ -10438,5 +10448,17 @@ characters = [
 #      ...
 
 # }
+
+# alt_names = {}
+
+# characters.each do |char|
+#   if alt_names["#{char[:species]}"].nil?
+#     alt_names["#{char[:species]}"] = [char[:name]]
+#   else
+#     alt_names["#{char[:species]}"] << char[:name]
+#   end
+# end
+
+# p alt_names
 
 # if the ancestry value is "", add that character into the "unknown" key (shown above)
